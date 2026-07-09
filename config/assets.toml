@@ -1,0 +1,31 @@
+[settings]
+base_url = "https://api.binance.com"
+max_requests_per_run = 80
+repair_lookback_days = 3
+backfill_calls_per_pair = 2
+request_limit = 1000
+
+symbols = [
+  "BTCUSDT",
+  "ETHUSDT",
+  "BNBUSDT",
+  "ADAUSDT",
+  "XRPUSDT",
+]
+
+intervals = [
+  "1m",
+  "5m",
+  "30m",
+  "1h",
+  "1d",
+  "1w",
+]
+
+[start_dates]
+BTCUSDT = "2017-08-17T00:00:00Z"
+ETHUSDT = "2017-08-17T00:00:00Z"
+BNBUSDT = "2017-11-06T00:00:00Z"
+ADAUSDT = "2018-04-17T00:00:00Z"
+XRPUSDT = "2018-05-04T00:00:00Z"
+
