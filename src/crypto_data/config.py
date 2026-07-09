@@ -1,50 +1,29 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from pathlib import Path
 import tomllib
 
 
 SUPPORTED_BINANCE_INTERVALS = {
-    "1s",
     "1m",
-    "3m",
-    "5m",
-    "15m",
-    "30m",
-    "1h",
-    "2h",
-    "4h",
-    "6h",
-    "8h",
-    "12h",
-    "1d",
-    "3d",
-    "1w",
-    "1M",
 }
+
+SUPPORTED_DERIVED_INTERVALS = {"5m", "10m", "30m", "1h", "1d", "1w", "1mo", "1yr"}
 
 
 @dataclass(frozen=True)
 class CollectorConfig:
     base_url: str
-    symbols: tuple[str, ...]
-    intervals: tuple[str, ...]
-    start_dates: dict[str, datetime]
+    quote_asset: str
+    top_n_symbols: int
+    base_interval: str
+    derived_intervals: tuple[str, ...]
+    excluded_base_assets: frozenset[str]
     max_requests_per_run: int
     repair_lookback_days: int
     backfill_calls_per_pair: int
     request_limit: int
-
-
-def parse_datetime(value: str) -> datetime:
-    if value.endswith("Z"):
-        value = value[:-1] + "+00:00"
-    parsed = datetime.fromisoformat(value)
-    if parsed.tzinfo is None:
-        parsed = parsed.replace(tzinfo=timezone.utc)
-    return parsed.astimezone(timezone.utc)
 
 
 def load_config(path: Path) -> CollectorConfig:
@@ -52,25 +31,24 @@ def load_config(path: Path) -> CollectorConfig:
         raw = tomllib.load(handle)
 
     settings = raw["settings"]
-    symbols = tuple(settings["symbols"])
-    intervals = tuple(settings["intervals"])
-    unsupported = sorted(set(intervals) - SUPPORTED_BINANCE_INTERVALS)
-    if unsupported:
-        raise ValueError(f"Unsupported Binance intervals in config: {', '.join(unsupported)}")
+    base_interval = settings.get("base_interval", "1m")
+    if base_interval not in SUPPORTED_BINANCE_INTERVALS:
+        raise ValueError(f"Unsupported Binance base interval in config: {base_interval}")
 
-    start_dates = {
-        symbol: parse_datetime(raw["start_dates"][symbol])
-        for symbol in symbols
-    }
+    derived_intervals = tuple(settings.get("derived_intervals", ()))
+    unsupported_derived = sorted(set(derived_intervals) - SUPPORTED_DERIVED_INTERVALS)
+    if unsupported_derived:
+        raise ValueError(f"Unsupported derived intervals in config: {', '.join(unsupported_derived)}")
 
     return CollectorConfig(
         base_url=settings.get("base_url", "https://api.binance.com").rstrip("/"),
-        symbols=symbols,
-        intervals=intervals,
-        start_dates=start_dates,
+        quote_asset=str(settings.get("quote_asset", "USDT")),
+        top_n_symbols=int(settings.get("top_n_symbols", 10)),
+        base_interval=base_interval,
+        derived_intervals=derived_intervals,
+        excluded_base_assets=frozenset(settings.get("excluded_base_assets", ())),
         max_requests_per_run=int(settings.get("max_requests_per_run", 80)),
         repair_lookback_days=int(settings.get("repair_lookback_days", 3)),
         backfill_calls_per_pair=int(settings.get("backfill_calls_per_pair", 2)),
         request_limit=int(settings.get("request_limit", 1000)),
     )
-

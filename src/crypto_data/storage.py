@@ -116,3 +116,14 @@ class ParquetStore:
             rows_written += len(group)
 
         return rows_written
+
+    def read_interval_years(self, symbol: str, interval: str, years: set[int]) -> pd.DataFrame:
+        frames = []
+        for year in sorted(years):
+            path = self.root / symbol / interval / f"{year}.parquet"
+            if path.exists():
+                frames.append(pd.read_parquet(path))
+        if not frames:
+            return pd.DataFrame(columns=["symbol", "interval", *COLUMNS])
+        output = pd.concat(frames, ignore_index=True)
+        return output.drop_duplicates(subset=["open_time"], keep="last").sort_values("open_time")

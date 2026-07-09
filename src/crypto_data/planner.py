@@ -16,25 +16,23 @@ class FetchPlan:
     reason: str
 
 
-def build_repair_plan(config: CollectorConfig, now: datetime) -> list[FetchPlan]:
+def build_repair_plan(config: CollectorConfig, symbols: list[str], now: datetime) -> list[FetchPlan]:
     now = now.astimezone(timezone.utc)
     start = now - timedelta(days=config.repair_lookback_days)
     return [
         FetchPlan(
             symbol=symbol,
-            interval=interval,
-            start_ms=dt_to_ms(max(start, config.start_dates[symbol])),
+            interval=config.base_interval,
+            start_ms=dt_to_ms(start),
             end_ms=dt_to_ms(now),
             reason="repair",
         )
-        for symbol in config.symbols
-        for interval in config.intervals
+        for symbol in symbols
     ]
 
 
-def next_backfill_start_ms(config: CollectorConfig, pair_state: dict[str, object], symbol: str) -> int:
+def next_backfill_start_ms(pair_state: dict[str, object]) -> int:
     cursor = pair_state.get("backfill_cursor_ms")
     if cursor is not None:
         return int(cursor)
-    return dt_to_ms(config.start_dates[symbol])
-
+    return 0

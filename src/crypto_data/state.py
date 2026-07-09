@@ -42,9 +42,21 @@ class StateStore:
     def mark_repaired(self, symbol: str, interval: str, value_ms: int) -> None:
         self.get_pair(symbol, interval)["last_repaired_through_ms"] = value_ms
 
-    def mark_update(self, symbol: str, interval: str, newest_open_time_ms: int, rows: int) -> None:
+    def mark_update(
+        self,
+        symbol: str,
+        interval: str,
+        oldest_open_time_ms: int,
+        newest_open_time_ms: int,
+        rows: int,
+    ) -> None:
         pair = self.get_pair(symbol, interval)
+        existing_first = pair.get("first_open_time_ms")
+        pair["first_open_time_ms"] = (
+            oldest_open_time_ms
+            if existing_first is None
+            else min(int(existing_first), oldest_open_time_ms)
+        )
         pair["latest_open_time_ms"] = max(int(pair.get("latest_open_time_ms", 0)), newest_open_time_ms)
         pair["last_rows_written"] = rows
         pair["updated_at_ms"] = now_ms()
-

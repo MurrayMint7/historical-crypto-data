@@ -4,34 +4,31 @@ Daily-updated Binance spot kline archive stored directly in GitHub as Parquet.
 
 The repository keeps the daily workflow lightweight. Each run:
 
-- repairs a recent lookback window for every configured symbol and interval
+- selects the current top 10 Binance USDT spot markets by 24h quote volume
+- fetches only native `1m` candles from Binance
+- repairs a recent lookback window for every selected symbol
 - spends the remaining request budget backfilling older missing history
+- derives higher intervals locally from stored `1m` candles
 - writes partitioned Parquet files under `data/<symbol>/<interval>/<year>.parquet`
 - updates `metadata/state.json`
 - commits only when data or metadata changed
 
 ## Scope
 
-Tracked symbols:
+Tracked symbols are dynamic: the collector asks Binance for the current top 10 `USDT` spot markets by 24h quote volume, excluding obvious stablecoin base assets.
 
-- `BTCUSDT`
-- `ETHUSDT`
-- `BNBUSDT`
-- `ADAUSDT`
-- `XRPUSDT`
+Only `1m` candles are collected from Binance. The repo then derives these intervals from local `1m` data:
 
-Tracked intervals:
-
-- `1m`
 - `5m`
+- `10m`
 - `30m`
 - `1h`
 - `1d`
 - `1w`
+- `1mo`
+- `1yr`
 
-Only native Binance spot kline intervals are collected. Requested intervals that Binance does not expose directly, such as `10m` and `1yr`, are intentionally excluded for now.
-
-The default start dates are the earliest useful Binance spot-history dates for these pairs. That is the earliest available history from this API, not necessarily the true market inception date of each coin.
+The backfill starts from the earliest history available from Binance for each selected market. That is API availability, not necessarily the true market inception date of each coin.
 
 ## Local Setup
 
@@ -55,7 +52,7 @@ pytest
 
 ## Configuration
 
-Edit [config/assets.toml](config/assets.toml) to change symbols, intervals, start dates, request budgets, or repair behavior.
+Edit [config/assets.toml](config/assets.toml) to change the quote asset, top-N count, derived intervals, request budgets, or repair behavior.
 
 Key settings:
 
@@ -66,4 +63,3 @@ Key settings:
 ## GitHub Action
 
 [.github/workflows/update-data.yml](.github/workflows/update-data.yml) runs daily and can also be triggered manually. It installs the package, runs the updater, then commits `data/` and `metadata/` changes back to the repository.
-

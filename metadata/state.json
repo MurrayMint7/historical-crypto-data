@@ -1,16 +1,11 @@
 {
   "pairs": {
     "BTCUSDT:1m": {
-      "last_repaired_through_ms": 1783614132532,
-      "last_rows_written": 1000,
-      "latest_open_time_ms": 1783414920000,
-      "updated_at_ms": 1783614132532
-    },
-    "BTCUSDT:5m": {
-      "last_repaired_through_ms": 1783614039140,
-      "last_rows_written": 864,
-      "latest_open_time_ms": 1783614000000,
-      "updated_at_ms": 1783614039140
+      "first_open_time_ms": 1783355700000,
+      "last_repaired_through_ms": 1783615053727,
+      "last_rows_written": 1364,
+      "latest_open_time_ms": 1783415820000,
+      "updated_at_ms": 1783615053727
     }
   }
 }
