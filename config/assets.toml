@@ -11,12 +11,11 @@ symbols = [
   "ETHUSDT",
   "XLMUSDT",
   "SOLUSDT",
-  "SENTUSDT",
-  "ZECUSDT",
+  "ADAUSDT",
+  "DOGEUSDT",
   "XRPUSDT",
   "BNBUSDT",
   "TRXUSDT",
-  "SPCXBUSDT",
 ]
 
 derived_intervals = [
