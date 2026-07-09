@@ -4,9 +4,20 @@ max_requests_per_run = 80
 repair_lookback_days = 3
 backfill_calls_per_pair = 2
 request_limit = 1000
-quote_asset = "USDT"
-top_n_symbols = 10
 base_interval = "1m"
+
+symbols = [
+  "BTCUSDT",
+  "ETHUSDT",
+  "XLMUSDT",
+  "SOLUSDT",
+  "SENTUSDT",
+  "ZECUSDT",
+  "XRPUSDT",
+  "BNBUSDT",
+  "TRXUSDT",
+  "SPCXBUSDT",
+]
 
 derived_intervals = [
   "5m",
@@ -17,19 +28,4 @@ derived_intervals = [
   "1w",
   "1mo",
   "1yr",
-]
-
-excluded_base_assets = [
-  "BUSD",
-  "DAI",
-  "FDUSD",
-  "TUSD",
-  "USDC",
-  "USDP",
-  "USDS",
-  "USDE",
-  "USD1",
-  "UST",
-  "USTC",
-  "RLUSD",
 ]

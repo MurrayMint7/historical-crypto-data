@@ -4,7 +4,7 @@ Daily-updated Binance spot kline archive stored directly in GitHub as Parquet.
 
 The repository keeps the daily workflow lightweight. Each run:
 
-- selects the current top 10 Binance USDT spot markets by 24h quote volume
+- uses a fixed top-10 Binance USDT spot-market snapshot
 - fetches only native `1m` candles from Binance
 - repairs a recent lookback window for every selected symbol
 - spends the remaining request budget backfilling older missing history
@@ -15,7 +15,18 @@ The repository keeps the daily workflow lightweight. Each run:
 
 ## Scope
 
-Tracked symbols are dynamic: the collector asks Binance for the current top 10 `USDT` spot markets by 24h quote volume, excluding obvious stablecoin base assets.
+Tracked symbols are fixed to the Binance top 10 `USDT` spot markets captured on 2026-07-09:
+
+- `BTCUSDT`
+- `ETHUSDT`
+- `XLMUSDT`
+- `SOLUSDT`
+- `SENTUSDT`
+- `ZECUSDT`
+- `XRPUSDT`
+- `BNBUSDT`
+- `TRXUSDT`
+- `SPCXBUSDT`
 
 Only `1m` candles are collected from Binance. The repo then derives these intervals from local `1m` data:
 
@@ -52,7 +63,7 @@ pytest
 
 ## Configuration
 
-Edit [config/assets.toml](config/assets.toml) to change the quote asset, top-N count, derived intervals, request budgets, or repair behavior.
+Edit [config/assets.toml](config/assets.toml) to change the fixed symbols, derived intervals, request budgets, or repair behavior.
 
 Key settings:
 

@@ -33,11 +33,7 @@ def run_update(
     store = ParquetStore(repo_root / "data")
     client = BinanceClient(config.base_url)
     summary = UpdateSummary()
-    symbols = client.top_symbols_by_quote_volume(
-        quote_asset=config.quote_asset,
-        top_n=config.top_n_symbols,
-        excluded_base_assets=config.excluded_base_assets,
-    )
+    symbols = list(config.symbols)
     print(f"selected symbols: {', '.join(symbols)}")
 
     repair_plans = build_repair_plan(config, symbols, datetime.now(timezone.utc))

@@ -15,11 +15,9 @@ SUPPORTED_DERIVED_INTERVALS = {"5m", "10m", "30m", "1h", "1d", "1w", "1mo", "1yr
 @dataclass(frozen=True)
 class CollectorConfig:
     base_url: str
-    quote_asset: str
-    top_n_symbols: int
+    symbols: tuple[str, ...]
     base_interval: str
     derived_intervals: tuple[str, ...]
-    excluded_base_assets: frozenset[str]
     max_requests_per_run: int
     repair_lookback_days: int
     backfill_calls_per_pair: int
@@ -42,11 +40,9 @@ def load_config(path: Path) -> CollectorConfig:
 
     return CollectorConfig(
         base_url=settings.get("base_url", "https://api.binance.com").rstrip("/"),
-        quote_asset=str(settings.get("quote_asset", "USDT")),
-        top_n_symbols=int(settings.get("top_n_symbols", 10)),
+        symbols=tuple(settings["symbols"]),
         base_interval=base_interval,
         derived_intervals=derived_intervals,
-        excluded_base_assets=frozenset(settings.get("excluded_base_assets", ())),
         max_requests_per_run=int(settings.get("max_requests_per_run", 80)),
         repair_lookback_days=int(settings.get("repair_lookback_days", 3)),
         backfill_calls_per_pair=int(settings.get("backfill_calls_per_pair", 2)),
