@@ -34,8 +34,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "Josh Murray"
+          git config user.email "joshuaamurray22@gmail.com"
           git add data metadata
           if git diff --cached --quiet; then
             echo "No data changes to commit."
@@ -43,4 +43,3 @@ jobs:
             git commit -m "Update crypto market data"
             git push
           fi
-
