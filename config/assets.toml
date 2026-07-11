@@ -1,5 +1,5 @@
 [settings]
-base_url = "https://api.binance.com"
+base_url = "https://data-api.binance.vision"
 max_requests_per_run = 80
 repair_lookback_days = 3
 backfill_calls_per_pair = 2
