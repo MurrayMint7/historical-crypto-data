@@ -1,76 +1,76 @@
 {
   "pairs": {
     "ADAUSDT:1m": {
-      "backfill_cursor_ms": 1524897660001,
+      "backfill_cursor_ms": 1525017660001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1784351107821,
-      "last_rows_written": 6619,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351111570
+      "last_repaired_through_ms": 1784439108969,
+      "last_rows_written": 7321,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439113406
     },
     "BNBUSDT:1m": {
-      "backfill_cursor_ms": 1510900380001,
+      "backfill_cursor_ms": 1511020380001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1784351108555,
-      "last_rows_written": 6621,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351113234
+      "last_repaired_through_ms": 1784439109783,
+      "last_rows_written": 7321,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439115385
     },
     "BTCUSDT:1m": {
-      "backfill_cursor_ms": 1503902340001,
+      "backfill_cursor_ms": 1504022340001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1784351106844,
-      "last_rows_written": 6618,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351109342
+      "last_repaired_through_ms": 1784439107897,
+      "last_rows_written": 7318,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439110629
     },
     "DOGEUSDT:1m": {
-      "backfill_cursor_ms": 1563287940001,
+      "backfill_cursor_ms": 1563407940001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1784351108065,
-      "last_rows_written": 6618,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351112137
+      "last_repaired_through_ms": 1784439109248,
+      "last_rows_written": 7318,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439114207
     },
     "ETHUSDT:1m": {
-      "backfill_cursor_ms": 1503902340001,
+      "backfill_cursor_ms": 1504022340001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1784351107091,
-      "last_rows_written": 6618,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351109896
+      "last_repaired_through_ms": 1784439108167,
+      "last_rows_written": 7318,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439111212
     },
     "SOLUSDT:1m": {
-      "backfill_cursor_ms": 1598085540001,
+      "backfill_cursor_ms": 1598205540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1784351107577,
-      "last_rows_written": 6617,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351111013
+      "last_repaired_through_ms": 1784439108703,
+      "last_rows_written": 7317,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439112390
     },
     "TRXUSDT:1m": {
-      "backfill_cursor_ms": 1529676540001,
+      "backfill_cursor_ms": 1529796540001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1784351108796,
-      "last_rows_written": 6618,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351113798
+      "last_repaired_through_ms": 1784439110048,
+      "last_rows_written": 7318,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439115983
     },
     "XLMUSDT:1m": {
-      "backfill_cursor_ms": 1528718940001,
+      "backfill_cursor_ms": 1528838940001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1784351107332,
-      "last_rows_written": 6620,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351110451
+      "last_repaired_through_ms": 1784439108431,
+      "last_rows_written": 7320,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439111800
     },
     "XRPUSDT:1m": {
-      "backfill_cursor_ms": 1526381400001,
+      "backfill_cursor_ms": 1526501400001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1784351108310,
-      "last_rows_written": 6620,
-      "latest_open_time_ms": 1784151900000,
-      "updated_at_ms": 1784351112696
+      "last_repaired_through_ms": 1784439109516,
+      "last_rows_written": 7322,
+      "latest_open_time_ms": 1784239860000,
+      "updated_at_ms": 1784439114807
     }
   }
 }
