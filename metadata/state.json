@@ -1,76 +1,76 @@
 {
   "pairs": {
     "ADAUSDT:1m": {
-      "backfill_cursor_ms": 1525857660001,
+      "backfill_cursor_ms": 1525977660001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1785044499897,
-      "last_rows_written": 12233,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044506251
+      "last_repaired_through_ms": 1785131998704,
+      "last_rows_written": 12934,
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132008475
     },
     "BNBUSDT:1m": {
-      "backfill_cursor_ms": 1511860380001,
+      "backfill_cursor_ms": 1511980380001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1785044501115,
-      "last_rows_written": 12234,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044509094
+      "last_repaired_through_ms": 1785131999867,
+      "last_rows_written": 12935,
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132011260
     },
     "BTCUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785044498273,
+      "last_repaired_through_ms": 1785131997160,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044502448
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132001601
     },
     "DOGEUSDT:1m": {
-      "backfill_cursor_ms": 1564247940001,
+      "backfill_cursor_ms": 1564367940001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1785044500300,
-      "last_rows_written": 12230,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044507195
+      "last_repaired_through_ms": 1785131999098,
+      "last_rows_written": 12933,
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132009392
     },
     "ETHUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785044498681,
+      "last_repaired_through_ms": 1785131997550,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044503373
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132005263
     },
     "SOLUSDT:1m": {
-      "backfill_cursor_ms": 1599045540001,
+      "backfill_cursor_ms": 1599165540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1785044499494,
-      "last_rows_written": 12231,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044505261
+      "last_repaired_through_ms": 1785131998319,
+      "last_rows_written": 12932,
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132007482
     },
     "TRXUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1785044501515,
+      "last_repaired_through_ms": 1785132000263,
       "last_rows_written": 8734,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044509981
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132012097
     },
     "XLMUSDT:1m": {
-      "backfill_cursor_ms": 1529678940001,
+      "backfill_cursor_ms": 1529798940001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1785044499087,
-      "last_rows_written": 12231,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044504306
+      "last_repaired_through_ms": 1785131997934,
+      "last_rows_written": 12934,
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132006540
     },
     "XRPUSDT:1m": {
-      "backfill_cursor_ms": 1527341400001,
+      "backfill_cursor_ms": 1527461400001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1785044500705,
-      "last_rows_written": 12233,
-      "latest_open_time_ms": 1784845260000,
-      "updated_at_ms": 1785044508155
+      "last_repaired_through_ms": 1785131999483,
+      "last_rows_written": 12933,
+      "latest_open_time_ms": 1784932740000,
+      "updated_at_ms": 1785132010343
     }
   }
 }
