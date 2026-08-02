@@ -1,76 +1,76 @@
 {
   "pairs": {
     "ADAUSDT:1m": {
-      "backfill_cursor_ms": 1526577660001,
+      "backfill_cursor_ms": 1526697660001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1785562557477,
-      "last_rows_written": 16442,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562563810
+      "last_repaired_through_ms": 1785648984915,
+      "last_rows_written": 17144,
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648990884
     },
     "BNBUSDT:1m": {
       "backfill_cursor_ms": 1512430080001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1785562558650,
+      "last_repaired_through_ms": 1785648986019,
       "last_rows_written": 15553,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562566799
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648993682
     },
     "BTCUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785562555842,
+      "last_repaired_through_ms": 1785648983384,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562559919
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648987245
     },
     "DOGEUSDT:1m": {
-      "backfill_cursor_ms": 1564967940001,
+      "backfill_cursor_ms": 1565087940001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1785562557870,
-      "last_rows_written": 16442,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562564806
+      "last_repaired_through_ms": 1785648985282,
+      "last_rows_written": 17143,
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648991817
     },
     "ETHUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785562556255,
+      "last_repaired_through_ms": 1785648983773,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562560809
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648988068
     },
     "SOLUSDT:1m": {
-      "backfill_cursor_ms": 1599765540001,
+      "backfill_cursor_ms": 1599885540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1785562557079,
-      "last_rows_written": 16440,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562562786
+      "last_repaired_through_ms": 1785648984534,
+      "last_rows_written": 17142,
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648989907
     },
     "TRXUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1785562559036,
+      "last_repaired_through_ms": 1785648986400,
       "last_rows_written": 8734,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562567583
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648994412
     },
     "XLMUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1785562556664,
+      "last_repaired_through_ms": 1785648984147,
       "last_rows_written": 14334,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562561788
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648988967
     },
     "XRPUSDT:1m": {
-      "backfill_cursor_ms": 1528061400001,
+      "backfill_cursor_ms": 1528181400001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1785562558266,
-      "last_rows_written": 16443,
-      "latest_open_time_ms": 1785363300000,
-      "updated_at_ms": 1785562565829
+      "last_repaired_through_ms": 1785648985639,
+      "last_rows_written": 17145,
+      "latest_open_time_ms": 1785449760000,
+      "updated_at_ms": 1785648992766
     }
   }
 }
