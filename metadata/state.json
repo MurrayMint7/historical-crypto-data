@@ -1,76 +1,76 @@
 {
   "pairs": {
     "ADAUSDT:1m": {
-      "backfill_cursor_ms": 1526697660001,
+      "backfill_cursor_ms": 1526817660001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1785648984915,
-      "last_rows_written": 17144,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648990884
+      "last_repaired_through_ms": 1785736353036,
+      "last_rows_written": 17846,
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736358727
     },
     "BNBUSDT:1m": {
       "backfill_cursor_ms": 1512430080001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1785648986019,
+      "last_repaired_through_ms": 1785736354083,
       "last_rows_written": 15553,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648993682
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736361397
     },
     "BTCUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785648983384,
+      "last_repaired_through_ms": 1785736351607,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648987245
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736355206
     },
     "DOGEUSDT:1m": {
-      "backfill_cursor_ms": 1565087940001,
+      "backfill_cursor_ms": 1565207940001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1785648985282,
-      "last_rows_written": 17143,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648991817
+      "last_repaired_through_ms": 1785736353388,
+      "last_rows_written": 17843,
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736359641
     },
     "ETHUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785648983773,
+      "last_repaired_through_ms": 1785736351973,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648988068
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736355977
     },
     "SOLUSDT:1m": {
-      "backfill_cursor_ms": 1599885540001,
+      "backfill_cursor_ms": 1600005540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1785648984534,
-      "last_rows_written": 17142,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648989907
+      "last_repaired_through_ms": 1785736352684,
+      "last_rows_written": 17842,
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736357771
     },
     "TRXUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1785648986400,
+      "last_repaired_through_ms": 1785736354429,
       "last_rows_written": 8734,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648994412
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736362091
     },
     "XLMUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1785648984147,
+      "last_repaired_through_ms": 1785736352327,
       "last_rows_written": 14334,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648988967
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736356828
     },
     "XRPUSDT:1m": {
-      "backfill_cursor_ms": 1528181400001,
+      "backfill_cursor_ms": 1528301400001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1785648985639,
-      "last_rows_written": 17145,
-      "latest_open_time_ms": 1785449760000,
-      "updated_at_ms": 1785648992766
+      "last_repaired_through_ms": 1785736353736,
+      "last_rows_written": 17847,
+      "latest_open_time_ms": 1785537120000,
+      "updated_at_ms": 1785736360575
     }
   }
 }
