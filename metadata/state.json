@@ -1,76 +1,76 @@
 {
   "pairs": {
     "ADAUSDT:1m": {
-      "backfill_cursor_ms": 1526817660001,
+      "backfill_cursor_ms": 1526937660001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1785736353036,
-      "last_rows_written": 17846,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736358727
+      "last_repaired_through_ms": 1785821103092,
+      "last_rows_written": 18547,
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821108346
     },
     "BNBUSDT:1m": {
       "backfill_cursor_ms": 1512430080001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1785736354083,
+      "last_repaired_through_ms": 1785821104472,
       "last_rows_written": 15553,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736361397
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821110583
     },
     "BTCUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785736351607,
+      "last_repaired_through_ms": 1785821099876,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736355206
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821105405
     },
     "DOGEUSDT:1m": {
-      "backfill_cursor_ms": 1565207940001,
+      "backfill_cursor_ms": 1565327940001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1785736353388,
-      "last_rows_written": 17843,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736359641
+      "last_repaired_through_ms": 1785821103700,
+      "last_rows_written": 18546,
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821109108
     },
     "ETHUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785736351973,
+      "last_repaired_through_ms": 1785821100202,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736355977
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821106049
     },
     "SOLUSDT:1m": {
-      "backfill_cursor_ms": 1600005540001,
+      "backfill_cursor_ms": 1600125540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1785736352684,
-      "last_rows_written": 17842,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736357771
+      "last_repaired_through_ms": 1785821101819,
+      "last_rows_written": 18545,
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821107544
     },
     "TRXUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1785736354429,
+      "last_repaired_through_ms": 1785821104769,
       "last_rows_written": 8734,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736362091
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821111179
     },
     "XLMUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1785736352327,
+      "last_repaired_through_ms": 1785821101163,
       "last_rows_written": 14334,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736356828
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821106749
     },
     "XRPUSDT:1m": {
-      "backfill_cursor_ms": 1528301400001,
+      "backfill_cursor_ms": 1528421400001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1785736353736,
-      "last_rows_written": 17847,
-      "latest_open_time_ms": 1785537120000,
-      "updated_at_ms": 1785736360575
+      "last_repaired_through_ms": 1785821104152,
+      "last_rows_written": 18549,
+      "latest_open_time_ms": 1785621840000,
+      "updated_at_ms": 1785821109892
     }
   }
 }
