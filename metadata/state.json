@@ -1,76 +1,76 @@
 {
   "pairs": {
     "ADAUSDT:1m": {
-      "backfill_cursor_ms": 1527177660001,
+      "backfill_cursor_ms": 1527297660001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1785994016423,
-      "last_rows_written": 19951,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994022482
+      "last_repaired_through_ms": 1786077146069,
+      "last_rows_written": 20652,
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077152059
     },
     "BNBUSDT:1m": {
       "backfill_cursor_ms": 1512430080001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1785994017569,
+      "last_repaired_through_ms": 1786077147214,
       "last_rows_written": 15553,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994025352
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077154934
     },
     "BTCUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785994014890,
+      "last_repaired_through_ms": 1786077144538,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994018736
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077148399
     },
     "DOGEUSDT:1m": {
-      "backfill_cursor_ms": 1565567940001,
+      "backfill_cursor_ms": 1565687940001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1785994016802,
-      "last_rows_written": 19947,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994023472
+      "last_repaired_through_ms": 1786077146450,
+      "last_rows_written": 20651,
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077153021
     },
     "ETHUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1785994015285,
+      "last_repaired_through_ms": 1786077144926,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994019538
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077149174
     },
     "SOLUSDT:1m": {
-      "backfill_cursor_ms": 1600365540001,
+      "backfill_cursor_ms": 1600485540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1785994016043,
-      "last_rows_written": 19947,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994021460
+      "last_repaired_through_ms": 1786077145690,
+      "last_rows_written": 20650,
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077151061
     },
     "TRXUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1785994017945,
+      "last_repaired_through_ms": 1786077147597,
       "last_rows_written": 8734,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994026100
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077155636
     },
     "XLMUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1785994015661,
+      "last_repaired_through_ms": 1786077145303,
       "last_rows_written": 14334,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994020420
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077150041
     },
     "XRPUSDT:1m": {
-      "backfill_cursor_ms": 1528661400001,
+      "backfill_cursor_ms": 1528781400001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1785994017188,
-      "last_rows_written": 19951,
-      "latest_open_time_ms": 1785794760000,
-      "updated_at_ms": 1785994024485
+      "last_repaired_through_ms": 1786077146834,
+      "last_rows_written": 20654,
+      "latest_open_time_ms": 1785877920000,
+      "updated_at_ms": 1786077154023
     }
   }
 }
