@@ -3,74 +3,74 @@
     "ADAUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1523937720000,
-      "last_repaired_through_ms": 1791449788299,
+      "last_repaired_through_ms": 1791536511656,
       "last_rows_written": 36676,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449796091
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536520062
     },
     "BNBUSDT:1m": {
       "backfill_cursor_ms": 1512430080001,
       "first_open_time_ms": 1509940440000,
-      "last_repaired_through_ms": 1791449790113,
+      "last_repaired_through_ms": 1791536513617,
       "last_rows_written": 15553,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449798895
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536523210
     },
     "BTCUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1791449785892,
+      "last_repaired_through_ms": 1791536508939,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449791453
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536515101
     },
     "DOGEUSDT:1m": {
       "backfill_cursor_ms": 1565923140001,
       "first_open_time_ms": 1562328000000,
-      "last_repaired_through_ms": 1791449788901,
+      "last_repaired_through_ms": 1791536512306,
       "last_rows_written": 21858,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449797024
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536521089
     },
     "ETHUSDT:1m": {
       "backfill_cursor_ms": 1504798740001,
       "first_open_time_ms": 1502942400000,
-      "last_repaired_through_ms": 1791449786513,
+      "last_repaired_through_ms": 1791536509608,
       "last_rows_written": 11716,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449792198
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536515958
     },
     "SOLUSDT:1m": {
       "backfill_cursor_ms": 1606779540001,
       "first_open_time_ms": 1597125600000,
-      "last_repaired_through_ms": 1791449787700,
+      "last_repaired_through_ms": 1791536510999,
       "last_rows_written": 57429,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449794749
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536518722
     },
     "TRXUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1528716600000,
-      "last_repaired_through_ms": 1791449790702,
+      "last_repaired_through_ms": 1791536514263,
       "last_rows_written": 8734,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449799599
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536523997
     },
     "XLMUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1527759000000,
-      "last_repaired_through_ms": 1791449787102,
+      "last_repaired_through_ms": 1791536510265,
       "last_rows_written": 14334,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449793003
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536516863
     },
     "XRPUSDT:1m": {
       "backfill_cursor_ms": 1530074340001,
       "first_open_time_ms": 1525421460000,
-      "last_repaired_through_ms": 1791449789502,
+      "last_repaired_through_ms": 1791536512965,
       "last_rows_written": 28001,
-      "latest_open_time_ms": 1791250560000,
-      "updated_at_ms": 1791449798089
+      "latest_open_time_ms": 1791337260000,
+      "updated_at_ms": 1791536522291
     }
   }
 }
