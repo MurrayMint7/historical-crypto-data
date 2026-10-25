@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -26,12 +26,16 @@ def run_update(
     repo_root: Path,
     config_path: Path | None = None,
     max_requests: int | None = None,
+    repair_days: int | None = None,
+    client: BinanceClient | None = None,
 ) -> UpdateSummary:
     config = load_config(config_path or repo_root / "config" / "assets.toml")
+    if repair_days is not None:
+        config = replace(config, repair_lookback_days=repair_days)
     budget = max_requests or config.max_requests_per_run
     state = StateStore(repo_root / "metadata" / "state.json")
     store = ParquetStore(repo_root / "data")
-    client = BinanceClient(config.base_url)
+    client = client or BinanceClient(config.base_url)
     summary = UpdateSummary()
     symbols = list(config.symbols)
     print(f"selected symbols: {', '.join(symbols)}")
@@ -40,8 +44,7 @@ def run_update(
     for plan in repair_plans:
         if summary.requests_used >= budget:
             break
-        _execute_plan(client, store, state, config, plan, summary)
-        state.mark_repaired(plan.symbol, plan.interval, now_ms())
+        _execute_repair(client, store, state, config, plan, summary, budget)
 
     for symbol in symbols:
         if summary.requests_used >= budget:
@@ -87,6 +90,48 @@ def _next_start_ms(
     return min(cursor_ms, gap_ms)
 
 
+def _execute_repair(
+    client: BinanceClient,
+    store: ParquetStore,
+    state: StateStore,
+    config: CollectorConfig,
+    plan: FetchPlan,
+    summary: UpdateSummary,
+    budget: int,
+) -> None:
+    """Page through the whole repair window, then write it once.
+
+    A single page covers only request_limit candles, far less than the
+    lookback window, so stopping after one page leaves partial days behind.
+    """
+    frames = []
+    start_ms = plan.start_ms
+    complete = False
+    while summary.requests_used < budget:
+        rows = client.klines(
+            symbol=plan.symbol,
+            interval=plan.interval,
+            start_time_ms=start_ms,
+            end_time_ms=plan.end_ms,
+            limit=config.request_limit,
+        )
+        summary.requests_used += 1
+        summary.rows_received += len(rows)
+        if rows:
+            frames.append(klines_to_frame(rows, plan.symbol, plan.interval))
+            start_ms = int(rows[-1][0]) + 1
+        if len(rows) < config.request_limit or (plan.end_ms is not None and start_ms > plan.end_ms):
+            complete = True
+            break
+
+    if frames:
+        _write_frame(store, state, config, plan, pd.concat(frames, ignore_index=True), summary)
+    if complete:
+        state.mark_repaired(plan.symbol, plan.interval, plan.end_ms or now_ms())
+    elif frames:
+        state.mark_repaired(plan.symbol, plan.interval, start_ms - 1)
+
+
 def _execute_plan(
     client: BinanceClient,
     store: ParquetStore,
@@ -107,7 +152,18 @@ def _execute_plan(
     if not rows:
         return 0
 
-    frame = klines_to_frame(rows, plan.symbol, plan.interval)
+    _write_frame(store, state, config, plan, klines_to_frame(rows, plan.symbol, plan.interval), summary)
+    return len(rows)
+
+
+def _write_frame(
+    store: ParquetStore,
+    state: StateStore,
+    config: CollectorConfig,
+    plan: FetchPlan,
+    frame: pd.DataFrame,
+    summary: UpdateSummary,
+) -> None:
     written = store.write(frame)
     written += _write_derived_intervals(store, config, plan.symbol, frame)
     oldest = int(frame["open_time"].min())
@@ -120,9 +176,8 @@ def _execute_plan(
 
     print(
         f"{plan.reason}: {plan.symbol} {plan.interval} "
-        f"rows={len(rows)} start_ms={plan.start_ms}"
+        f"rows={len(frame)} start_ms={plan.start_ms}"
     )
-    return len(rows)
 
 
 def _write_derived_intervals(

@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: "17 2 * * *"
   workflow_dispatch:
+    inputs:
+      repair_days:
+        description: "One-off repair lookback in days (blank uses config)"
+        required: false
+        default: ""
+      max_requests:
+        description: "Request budget for this run"
+        required: false
+        default: "80"
 
 permissions:
   contents: write
@@ -30,7 +39,10 @@ jobs:
         run: pip install -e .
 
       - name: Update data
-        run: crypto-data update --max-requests 80
+        env:
+          REPAIR_DAYS: ${{ inputs.repair_days }}
+          MAX_REQUESTS: ${{ inputs.max_requests || '80' }}
+        run: crypto-data update --max-requests "$MAX_REQUESTS" ${REPAIR_DAYS:+--repair-days "$REPAIR_DAYS"}
 
       - name: Commit changes
         run: |

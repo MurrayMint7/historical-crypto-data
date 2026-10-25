@@ -14,10 +14,21 @@ def main() -> None:
     update.add_argument("--repo-root", type=Path, default=Path.cwd())
     update.add_argument("--config", type=Path, default=None)
     update.add_argument("--max-requests", type=int, default=None)
+    update.add_argument(
+        "--repair-days",
+        type=int,
+        default=None,
+        help="override repair_lookback_days for a one-off deeper repair",
+    )
 
     args = parser.parse_args()
     if args.command == "update":
-        summary = run_update(args.repo_root, config_path=args.config, max_requests=args.max_requests)
+        summary = run_update(
+            args.repo_root,
+            config_path=args.config,
+            max_requests=args.max_requests,
+            repair_days=args.repair_days,
+        )
         print(
             "update complete: "
             f"requests={summary.requests_used} "

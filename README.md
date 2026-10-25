@@ -67,9 +67,11 @@ Edit [config/assets.toml](config/assets.toml) to change the fixed symbols, deriv
 Key settings:
 
 - `max_requests_per_run`: total Binance kline requests for one cron run
-- `repair_lookback_days`: recent history repaired every run
+- `repair_lookback_days`: recent history repaired every run; the repair pages through the whole window (about 1.5 requests per symbol per day of lookback)
 - `backfill_calls_per_pair`: cap for older backfill calls per symbol/interval per run
 
 ## GitHub Action
 
 [.github/workflows/update-data.yml](.github/workflows/update-data.yml) runs daily and can also be triggered manually. It installs the package, runs the updater, then commits `data/` and `metadata/` changes back to the repository.
+
+To fill a recent gap, run the workflow manually with `repair_days` set to the number of days to repair and a `max_requests` budget of about `1.5 × days × symbols`. The equivalent local command is `crypto-data update --repair-days 120 --max-requests 1700`.
